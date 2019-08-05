@@ -16,20 +16,6 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class EarthquakeAdapter  extends ArrayAdapter<Earthquake1> {
-    private String FormatDate(Date dateobject) {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("LLL dd,yyyy");
-        return dateFormat.format(dateobject);
-    }
-
-    private String FormatTime(Date dateobject) {
-        SimpleDateFormat timeFormat = new SimpleDateFormat("h:mm a");
-        return timeFormat.format(dateobject);
-    }
-    private String formatMagnitude(double magnitude){
-        DecimalFormat magnitudeformat=new DecimalFormat("0.0");
-        return magnitudeformat.format(magnitude);
-
-    }
 
 
 private static final String LOCATION_SEPERATOR="of";
@@ -135,6 +121,20 @@ private static final String LOCATION_SEPERATOR="of";
         return ContextCompat.getColor(getContext(),magnitudeColorResourceId);
     }
 
+    private String FormatDate(Date dateobject) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("LLL dd,yyyy");
+        return dateFormat.format(dateobject);
+    }
+
+    private String FormatTime(Date dateobject) {
+        SimpleDateFormat timeFormat = new SimpleDateFormat("h:mm a");
+        return timeFormat.format(dateobject);
+    }
+    private String formatMagnitude(double magnitude){
+        DecimalFormat magnitudeformat=new DecimalFormat("0.0");
+        return magnitudeformat.format(magnitude);
+
+    }
 
 
 }
